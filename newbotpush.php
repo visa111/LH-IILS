@@ -37,7 +37,7 @@ if($message == "นับ 1-10"){
 
 
    function pushMsg($arrayHeader,$arrayPostData){
-      $strUrl = "https://api.line.me/v2/bot/message/push";
+      $strUrl = "https://api.line.me/v2/bot/message/reply";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
       curl_setopt($ch, CURLOPT_HEADER, false);
