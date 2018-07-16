@@ -23,6 +23,8 @@
       $arrayPostData['messages'][1]['stickerId'] = "34";
       $arrayPostData['messages'][2]['type'] = "text";
       $arrayPostData['messages'][2]['text'] = $id;
+      $arrayPostData['messages'][2]['type'] = "text";
+      $arrayPostData['messages'][2]['text'] = $group;
       pushMsg($arrayHeader,$arrayPostData);
    }
 
