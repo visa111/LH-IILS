@@ -9,12 +9,13 @@
    $message = $arrayJson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
    $id = $arrayJson['events'][0]['source']['userId'];
+   $group = $arrayJson['events'][0]['source']['groupId'];
 
 
 
    #ตัวอย่าง Message Type "Text + Sticker"
    if($message == "สวัสดี" or $message == "สวัสดีครับ"){
-      $arrayPostData['to'] = $id;
+      $arrayPostData['to'] = $group;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
       $arrayPostData['messages'][1]['type'] = "sticker";
