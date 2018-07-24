@@ -1,5 +1,5 @@
 <?php
-   $accessToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
+   $accessToken = "dqlJ7qi+56CkIeXXjTYdu+vdV2pwsjB0dY9UMQDNO7be8ymtAVJO6PUkAxBKR0hdMde88YOy+xwPVGYUz06KWEZqjSo7g0o+GFkvBeHp+nnFblLPeRgz+pxef1wfVnIKs66z7jZtQzPonUFouqQFCAdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
    $content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
    $arrayHeader = array();
@@ -22,8 +22,8 @@
       $arrayPostData['messages'][1]['stickerId'] = "34";
       $arrayPostData['messages'][2]['type'] = "text";
       $arrayPostData['messages'][2]['text'] = $id;
-      $arrayPostData['messages'][2]['type'] = "text";
-      $arrayPostData['messages'][2]['text'] = $group;
+      $arrayPostData['messages'][3]['type'] = "text";
+      $arrayPostData['messages'][3]['text'] = $group;
       pushMsg($arrayHeader,$arrayPostData);
    }
 
