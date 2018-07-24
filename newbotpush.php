@@ -1,5 +1,5 @@
 <?php
-   $accessToken = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
+   $accessToken = "dqlJ7qi+56CkIeXXjTYdu+vdV2pwsjB0dY9UMQDNO7be8ymtAVJO6PUkAxBKR0hdMde88YOy+xwPVGYUz06KWEZqjSo7g0o+GFkvBeHp+nnFblLPeRgz+pxef1wfVnIKs66z7jZtQzPonUFouqQFCAdB04t89/1O/w1cDnyilFU=";//copy ข้อความ Channel access token ตอนที่ตั้งค่า
    $content = file_get_contents('php://input');
    $arrayJson = json_decode($content, true);
    $arrayHeader = array();
@@ -14,7 +14,7 @@
 
 #ตัวอย่าง Message Type "Text + Sticker"
    if($message == "สวัสดี" or $message == "สวัสดีครับ"){
-      $arrayPostData['to'] = $id;
+      $arrayPostData['to'] = $group;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
       $arrayPostData['messages'][1]['type'] = "sticker";
