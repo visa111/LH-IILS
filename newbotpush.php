@@ -12,21 +12,6 @@
    $group = $arrayJson['events'][0]['source']['groupId'];
 
 
-
-   #ตัวอย่าง Message Type "Text + Sticker"
-   if($message == "สวัสดี" or $message == "สวัสดีครับ"){
-      $arrayPostData['to'] = $group;
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-      $arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34";
-      $arrayPostData['messages'][2]['type'] = "text";
-      $arrayPostData['messages'][2]['text'] = $id;
-      $arrayPostData['messages'][2]['type'] = "text";
-      $arrayPostData['messages'][2]['text'] = $group;
-      pushMsg($arrayHeader,$arrayPostData);
-   }
 #ตัวอย่าง Message Type "Text + Sticker"
    if($message == "สวัสดี" or $message == "สวัสดีครับ"){
       $arrayPostData['to'] = $id;
